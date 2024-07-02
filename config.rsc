@@ -4,7 +4,7 @@
 # 2. Melakukan pengecekan pada allow remote request di DNS settings
 :if ([/ip dns get allow-remote-requests] = false) do={ /ip dns set allow-remote-requests=yes }
 
-# 3. Mengaktifkan PPTP, SSTP, dan L2TP server
+# 3. Mengaktifkan PPTP SSTP dan L2TP server
 /interface pptp-server server set enabled=yes
 /interface sstp-server server set enabled=yes
 /interface l2tp-server server set enabled=yes
