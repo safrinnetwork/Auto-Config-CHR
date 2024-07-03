@@ -5,9 +5,9 @@
 :if ([/ip dns get allow-remote-requests] = false) do={ /ip dns set allow-remote-requests=yes }
 
 # 3. Mengaktifkan PPTP, SSTP, dan L2TP server
-/interface pptp-server set enabled=yes
-/interface sstp-server set enabled=yes
-/interface l2tp-server set enabled=yes
+/interface pptp-server server set enabled=yes
+/interface sstp-server server set enabled=yes
+/interface l2tp-server server set enabled=yes
 
 # 4. Membuat PPP profile baru untuk PPTP
 /ppp profile add name=pptp local-address=11.10.11.1 rate-limit=3M/3M comment="Mostech_Auto"
